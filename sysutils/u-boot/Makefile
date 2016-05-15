@@ -2,7 +2,7 @@
 
 CATEGORIES=	sysutils
 COMMENT=	U-Boot boot loader
-DISTNAME=	u-boot-2016.03
+DISTNAME=	u-boot-2016.05-rc3
 EXTRACT_SUFX=	.tar.bz2
 MASTER_SITES=	ftp://ftp.denx.de/pub/u-boot/
 HOMEPAGE=	http://www.denx.de/wiki/U-Boot
