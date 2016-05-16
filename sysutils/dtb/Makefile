@@ -1,18 +1,22 @@
 # $OpenBSD$
 
-CATEGORIES=	sysutils
 COMMENT=	Device Tree Blobs
-DISTNAME=	linux-4.5
+DISTNAME=	linux-4.6
 PKGNAME=	${DISTNAME:S/linux/dtb/}
-EXTRACT_SUFX=	.tar.xz
-MASTER_SITES=	https://cdn.kernel.org/pub/linux/kernel/v4.x/
+CATEGORIES=	sysutils
 HOMEPAGE=	http://www.devicetree.org
-
-BUILD_DEPENDS=	devel/dtc \
-		lang/gcc/4.9
+MAINTAINER=	Jonathan Gray <jsg@openbsd.org>
 
 # dual GPL/BSD
 PERMIT_PACKAGE_CDROM=	Yes
+
+MASTER_SITES=	https://cdn.kernel.org/pub/linux/kernel/v4.x/
+EXTRACT_SUFX=	.tar.xz
+PKG_ARCH=	*
+
+BUILD_DEPENDS=	devel/dtc \
+		lang/gcc/4.9
+NO_TEST=	Yes
 
 ARCHS= arm arm64 mips powerpc
 
