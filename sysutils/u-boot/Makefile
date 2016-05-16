@@ -1,20 +1,22 @@
 #	$OpenBSD$
 
-CATEGORIES=	sysutils
 COMMENT=	U-Boot boot loader
 DISTNAME=	u-boot-2016.05-rc3
-EXTRACT_SUFX=	.tar.bz2
-MASTER_SITES=	ftp://ftp.denx.de/pub/u-boot/
+CATEGORIES=	sysutils
 HOMEPAGE=	http://www.denx.de/wiki/U-Boot
+MAINTAINER=	Jonathan Gray <jsg@openbsd.org>
 
-PKG_ARCH-data=	*
 # GPLv2
 PERMIT_PACKAGE_CDROM=	Yes
 
-BUILD_DEPENDS=		devel/arm-none-eabi/gcc-linaro
+MASTER_SITES=	ftp://ftp.denx.de/pub/u-boot/
+EXTRACT_SUFX=	.tar.bz2
+PKG_ARCH=	*
 
-USE_GMAKE=		Yes
+BUILD_DEPENDS=		devel/arm-none-eabi/gcc-linaro
 MAKE_ENV+=		CROSS_COMPILE="arm-none-eabi-" KBUILD_VERBOSE=1
+USE_GMAKE=		Yes
+NO_TEST=		Yes
 
 BOARDS=\
 	omap3_beagle \
@@ -54,10 +56,10 @@ do-build:
 .for BOARD in ${BOARDS}
 	cd ${WRKSRC} && \
 	    mkdir -p build/${BOARD} && \
-	    env -i ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+	    ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 	        O="build/${BOARD}" \
 	        -f ${MAKE_FILE} "${BOARD}"_defconfig && \
-	    env -i ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+	    ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 	        O="build/${BOARD}" \
 	        -f ${MAKE_FILE} ${ALL_TARGET}
 .endfor
