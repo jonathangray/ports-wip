@@ -1,6 +1,6 @@
 #	$OpenBSD$
 
-COMMENT=	U-Boot boot loader
+COMMENT=	U-Boot firmware
 DISTNAME=	u-boot-2016.05-rc3
 CATEGORIES=	sysutils
 HOMEPAGE=	http://www.denx.de/wiki/U-Boot
