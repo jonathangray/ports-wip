@@ -14,8 +14,9 @@ MASTER_SITES=	https://cdn.kernel.org/pub/linux/kernel/v4.x/
 EXTRACT_SUFX=	.tar.xz
 PKG_ARCH=	*
 
-BUILD_DEPENDS=	devel/dtc \
-		lang/gcc/4.9
+MODULES=	gcc4
+MODGCC4_ARCHS=	*
+BUILD_DEPENDS=	devel/dtc
 NO_TEST=	Yes
 
 ARCHS= arm arm64 mips powerpc
