@@ -13,7 +13,8 @@ MASTER_SITES=	ftp://ftp.denx.de/pub/u-boot/
 EXTRACT_SUFX=	.tar.bz2
 PKG_ARCH=	*
 
-BUILD_DEPENDS=	devel/arm-none-eabi/gcc-linaro
+BUILD_DEPENDS=	devel/arm-none-eabi/gcc-linaro \
+		devel/dtc
 MAKE_ENV+=	CROSS_COMPILE="arm-none-eabi-" KBUILD_VERBOSE=1
 USE_GMAKE=	Yes
 NO_TEST=	Yes
