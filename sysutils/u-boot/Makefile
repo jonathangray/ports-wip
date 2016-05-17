@@ -1,7 +1,7 @@
 #	$OpenBSD$
 
 COMMENT=	U-Boot firmware
-DISTNAME=	u-boot-2016.05-rc3
+DISTNAME=	u-boot-2016.05
 CATEGORIES=	sysutils
 HOMEPAGE=	http://www.denx.de/wiki/U-Boot
 MAINTAINER=	Jonathan Gray <jsg@openbsd.org>
@@ -43,12 +43,18 @@ BOARDS=\
 	novena \
 	udoo \
 	wandboard \
-	clearfog
+	clearfog \
+	rpi_2 \
+	rpi_3_32b \
+	vexpress_ca15_tc2 \
+	vexpress_ca9x4
 
 FILES=\
 	MLO \
 	SPL \
+	u-boot \
 	u-boot.img \
+	u-boot.bin \
 	u-boot-sunxi-with-spl.bin \
 	u-boot.imx \
 	u-boot-spl.kwb
