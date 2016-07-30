@@ -2,10 +2,10 @@
 
 COMMENT=	enhanced port of the DOOM source code
 CATEGORIES=	games x11
-GITREV=		openal-2142e857a95789b87f5808bf7588675362421b75
-DISTNAME=	rheit-zdoom-2142e85
-PKGNAME=	zdoom-20131024
-MASTER_SITES=	https://github.com/rheit/zdoom/tarball/openal/
+
+GH_ACCOUNT=	rheit
+GH_PROJECT=	zdoom
+GH_TAGNAME=	2.8.1
 
 HOMEPAGE=	http://zdoom.org
 
@@ -15,17 +15,14 @@ PERMIT_PACKAGE_CDROM=	No
 PERMIT_PACKAGE_FTP=	No
 PERMIT_DISTFILES_FTP=	Yes
 
-WANTLIB += SDL Xcursor bz2 c glib-2.0 gmodule-2.0 gobject-2.0
-WANTLIB += gstapp-0.10 gstaudio-0.10 gstbase-0.10 gstinterfaces-0.10
-WANTLIB += gstreamer-0.10 gthread-2.0
-WANTLIB += intl jpeg m openal pthread stdc++ z xml2
+WANTLIB += SDL2  bz2 c 
+WANTLIB += jpeg m openal pthread sndfile stdc++ z
 
 LIB_DEPENDS=	audio/openal \
-		devel/sdl \
+		audio/libsndfile \
+		devel/sdl2 \
 		graphics/jpeg \
-		multimedia/gstreamer-0.10/plugins-base \
-		archivers/bzip2 \
-		textproc/libxml
+		archivers/bzip2
 
 MODULES=	devel/cmake
 CONFIGURE_ARGS=	-DNO_GTK:Bool=True \

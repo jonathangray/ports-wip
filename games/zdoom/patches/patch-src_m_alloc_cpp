@@ -1,6 +1,6 @@
 $OpenBSD$
---- src/m_alloc.cpp.orig	Sat May 24 16:40:40 2014
-+++ src/m_alloc.cpp	Sat May 24 16:42:25 2014
+--- src/m_alloc.cpp.orig	Mon Feb 22 13:11:13 2016
++++ src/m_alloc.cpp	Sun Jul 31 02:42:09 2016
 @@ -52,14 +52,14 @@
  #endif
  #if defined(__APPLE__)
