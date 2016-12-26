@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+share/doc/pkg-readmes/${FULLPKGNAME}
+share/yquake2/rogue/
+share/yquake2/rogue/game.so

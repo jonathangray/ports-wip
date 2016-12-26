@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+share/doc/pkg-readmes/${FULLPKGNAME}
+share/yquake2/xatrix/
+share/yquake2/xatrix/game.so

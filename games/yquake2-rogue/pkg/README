@@ -1,0 +1,12 @@
+$OpenBSD$
+
++-----------------------------------------------------------------------
+| Running ${FULLPKGNAME} on OpenBSD
++-----------------------------------------------------------------------
+
+To run yquake2 on OpenBSD, you need the original Ground Zero data files.
+
+Copy *.pak and the video directory to ${TRUEPREFIX}/share/yquake2/rogue/
+and start up yquake2.
+
+quake2 +set game rogue

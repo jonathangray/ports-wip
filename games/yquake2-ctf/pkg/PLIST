@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+share/doc/pkg-readmes/${FULLPKGNAME}
+share/yquake2/ctf/
+share/yquake2/ctf/game.so
