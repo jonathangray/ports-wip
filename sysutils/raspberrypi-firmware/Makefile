@@ -15,6 +15,8 @@ PERMIT_PACKAGE_CDROM=	No
 PERMIT_PACKAGE_FTP=	Yes
 PERMIT_DISTFILES_FTP=	Yes
 
+PKG_ARCH=		*
+
 do-build:
 
 do-install:
