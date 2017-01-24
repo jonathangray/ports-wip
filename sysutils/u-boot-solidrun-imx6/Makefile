@@ -4,8 +4,8 @@ CATEGORIES=	sysutils
 COMMENT=	U-Boot boot loader for SolidRun i.MX 6
 GH_ACCOUNT=	SolidRun
 GH_PROJECT=	u-boot-imx6
-DISTNAME=	u-boot-solidrun-imx6-20151013
-GH_COMMIT=	408544d61f230060f18ffe2e06565deadbcf3451
+DISTNAME=	u-boot-solidrun-imx6-20161216
+GH_COMMIT=	c8d1200ac4b91dc0ade22874bc3f45177fad5714
 HOMEPAGE=	http://wiki.solid-run.com/doku.php?id=products:imx6:software:development:u-boot
 
 PKG_ARCH-data=	*
@@ -37,11 +37,11 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot
+	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot-solidrun-imx6
 .for BOARD in ${BOARDS}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot/${BOARD}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot-solidrun-imx6/${BOARD}
 	-cd ${WRKSRC}/build/${BOARD} && \
-	    cp ${FILES} ${PREFIX}/share/u-boot/${BOARD}/
+	    cp ${FILES} ${PREFIX}/share/u-boot-solidrun-imx6/${BOARD}/
 .endfor
 
 .include <bsd.port.mk>
