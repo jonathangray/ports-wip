@@ -7,7 +7,7 @@ PKGNAME=	lua-pty-${V}
 CATEGORIES=	devel
 
 HOMEPAGE=	http://tset.de/lpty/
-MAINTAINER=	Jonathan Gray jsg@openbsd.org
+MAINTAINER=	Jonathan Gray <jsg@openbsd.org>
 
 MODULES=	lang/lua
 
@@ -19,7 +19,6 @@ PERMIT_PACKAGE_CDROM=Yes
 
 MASTER_SITES=	http://tset.de/downloads/
 
-USE_GMAKE=	Yes
 NO_TEST=	Yes
 
 do-build:
