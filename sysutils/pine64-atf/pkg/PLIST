@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+share/u-boot/
+share/u-boot/pine64_plus/
+share/u-boot/pine64_plus/bl31.bin
