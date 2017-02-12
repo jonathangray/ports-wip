@@ -14,7 +14,8 @@ PERMIT_DISTFILES_FTP=	No
 
 PKG_ARCH=		*
 
-do-build:
+NO_BUILD=		Yes
+NO_TEST=		Yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot/pine64_plus/

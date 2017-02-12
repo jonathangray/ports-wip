@@ -16,8 +16,7 @@ BUILD_DEPENDS+= devel/arm-none-eabi/gcc-linaro,aarch64
 MAKE_ENV+= CROSS_COMPILE="aarch64-none-elf-"
 MAKE_ENV+= BUILD_STRING="${VERSION}"
 
-test:
-
+NO_TEST=	Yes
 USE_GMAKE=	Yes
 
 do-build:

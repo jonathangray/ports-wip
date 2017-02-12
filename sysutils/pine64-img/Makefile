@@ -17,13 +17,12 @@ BUILD_DEPENDS=	sysutils/pine64-boot0 \
 		sysutils/pine64-atf \
 		sysutils/u-boot,aarch64
 
-test:
-
+NO_TEST=	Yes
 USE_GMAKE=	Yes
 
-BOOT0=/usr/local/share/u-boot/pine64_plus/boot0.bin
-ATF=/usr/local/share/u-boot/pine64_plus/bl31.bin
-UBOOT=/usr/local/share/u-boot/pine64_plus/u-boot.bin
+BOOT0=${LOCALBASE}/share/u-boot/pine64_plus/boot0.bin
+ATF=${LOCALBASE}/share/u-boot/pine64_plus/bl31.bin
+UBOOT=${LOCALBASE}/share/u-boot/pine64_plus/u-boot.bin
 
 do-build:
 	cd ${WRKSRC}/tools && \

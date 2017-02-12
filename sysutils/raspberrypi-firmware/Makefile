@@ -17,7 +17,8 @@ PERMIT_DISTFILES_FTP=	Yes
 
 PKG_ARCH=		*
 
-do-build:
+NO_BUILD=		Yes
+NO_TEST=		Yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/raspberrypi-firmware/
