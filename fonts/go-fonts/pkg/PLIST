@@ -1,7 +1,7 @@
 @comment $OpenBSD$
 share/doc/go-fonts/
 share/doc/go-fonts/README
-share/fonts/
+@fontdir share/fonts/
 share/fonts/go/
 share/fonts/go/Go-Bold-Italic.ttf
 share/fonts/go/Go-Bold.ttf

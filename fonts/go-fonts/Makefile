@@ -16,6 +16,8 @@ PERMIT_PACKAGE_CDROM=	Yes
 NO_BUILD=	Yes
 NO_TEST=	Yes
 
+PKG_ARCH=	*
+
 FONTDIR=	${PREFIX}/share/fonts/go
 DOCDIR=		${PREFIX}/share/doc/go-fonts
 
