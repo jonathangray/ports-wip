@@ -22,11 +22,11 @@ USE_GMAKE=	Yes
 do-build:
 	cd ${WRKSRC} && \
 	    ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-	        -f ${MAKE_FILE} PLAT=rk3399 DEBUG=1 bl31
+	        -f ${MAKE_FILE} PLAT=rk3399 bl31
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/atf/rk3399/
-	${INSTALL_DATA} ${WRKBUILD}/build/rk3399/debug/bl31.bin \
+	${INSTALL_DATA} ${WRKBUILD}/build/rk3399/release/bl31.bin \
 	    ${PREFIX}/share/atf/rk3399/
 
 .include <bsd.port.mk>
