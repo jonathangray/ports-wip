@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+share/atf/
+share/atf/rk3399/
+share/atf/rk3399/bl31.bin
