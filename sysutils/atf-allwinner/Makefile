@@ -1,4 +1,6 @@
-COMMENT=	ARM Trusted Firmware for A64/H5
+#	$OpenBSD$
+
+COMMENT=	ARM Trusted Firmware for Allwinner A64/H5
 GH_ACCOUNT=	apritzel
 GH_PROJECT=	arm-trusted-firmware
 GH_COMMIT=	87e8aedd80e6448a55b2328768d956fcb5f5d410
