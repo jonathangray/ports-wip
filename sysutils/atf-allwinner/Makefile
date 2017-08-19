@@ -10,6 +10,7 @@ DISTNAME=	${GH_PROJECT}-allwinner-${VERSION}
 PKGNAME=	atf-allwinner-${VERSION}
 CATEGORIES=	sysutils
 
+# BSD
 PERMIT_PACKAGE_CDROM=	Yes
 
 PKG_ARCH=		*
