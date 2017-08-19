@@ -1,11 +1,11 @@
-COMMENT=	ARM Trusted Firmware for pine64
+COMMENT=	ARM Trusted Firmware for A64/H5
 GH_ACCOUNT=	apritzel
 GH_PROJECT=	arm-trusted-firmware
-GH_COMMIT=	aa75c8da415158a94b82a430b2b40000778e851f
-VERSION=	20170220
+GH_COMMIT=	87e8aedd80e6448a55b2328768d956fcb5f5d410
+VERSION=	20170702
 
-DISTNAME=	${GH_PROJECT}-pine64-${VERSION}
-PKGNAME=	pine64-atf-${VERSION}
+DISTNAME=	${GH_PROJECT}-allwinner-${VERSION}
+PKGNAME=	atf-allwinner-${VERSION}
 CATEGORIES=	sysutils
 
 PERMIT_PACKAGE_CDROM=	Yes
@@ -25,8 +25,8 @@ do-build:
 	        -f ${MAKE_FILE} PLAT=sun50iw1p1 DEBUG=1 bl31
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/u-boot/pine64_plus/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/atf-allwinner/
 	${INSTALL_DATA} ${WRKBUILD}/build/sun50iw1p1/debug/bl31.bin \
-	    ${PREFIX}/share/u-boot/pine64_plus/
+	    ${PREFIX}/share/atf-allwinner/
 
 .include <bsd.port.mk>
