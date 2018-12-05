@@ -1,0 +1,11 @@
+$OpenBSD$
+
+Index: etc/pam/CMakeLists.txt
+--- etc/pam/CMakeLists.txt.orig
++++ etc/pam/CMakeLists.txt
+@@ -2,4 +2,4 @@
+ # CMakeLists.txt for openwsman/etc/pam
+ #
+ 
+-INSTALL(FILES openwsman DESTINATION ${SYSCONFDIR}/pam.d)
++#INSTALL(FILES openwsman DESTINATION ${SYSCONFDIR}/pam.d)

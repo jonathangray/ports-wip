@@ -1,0 +1,14 @@
+$OpenBSD$
+
+Index: wxmlgetvalue
+--- wxmlgetvalue.orig
++++ wxmlgetvalue
+@@ -3,7 +3,7 @@
+ MYNAME=`basename $0`
+ MYPATH=${0%/*}
+ NODATEDUMP=1
+-. ${MYPATH}/wsl-functions
++. ${LOCALBASE}/share/wsl/wsl-functions
+ 
+ usage() {
+   ${WSCOLORERR}

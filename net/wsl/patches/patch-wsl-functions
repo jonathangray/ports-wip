@@ -1,0 +1,15 @@
+$OpenBSD$
+
+Index: wsl-functions
+--- wsl-functions.orig
++++ wsl-functions
+@@ -579,7 +579,8 @@ fDisplayResponse() {
+     if [ -z "${FORMATDISPLAY}" ] || [ ${XsLTSTAT} -ne 0 ] || [ ${ISSOAP} -ne 0 ]; then
+       cat ${vFile} ; echo
+     else
+-      cat ${vFile} | sed 's/^\s*//g' | tr -d '\n' | xsltproc ${MYPATH}/wsl-ws2textc.xsl -
++      cat ${vFile} | sed 's/^\s*//g' | tr -d '\n' \
++        | xsltproc ${LOCALBASE}/share/wsl/wsl-ws2textc.xsl -
+     fi
+     $WSCOLORNORM
+   fi

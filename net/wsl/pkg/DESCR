@@ -1,0 +1,8 @@
+WSL contains various scripts that serve as a client interface to WSMAN or
+Web Services for Management protocol based on DMTF standard specification.
+WSMAN provides standards based messaging for systems management CIM-style
+objects.
+
+WSL is "lightweight" because it is composed of scripts (that is no binary)
+and is dependent on tools that are already present on standard installation
+or readily available to UNIX-like operating systems.

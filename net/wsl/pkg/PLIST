@@ -1,0 +1,14 @@
+@comment $OpenBSD: PLIST,v$
+bin/viwsl
+bin/wsl
+bin/wslcred
+bin/wslecn
+bin/wslenum
+bin/wslget
+bin/wslid
+bin/wslinvoke
+bin/wslput
+bin/wxmlgetvalue
+share/wsl/
+share/wsl/wsl-functions
+share/wsl/wsl-ws2textc.xsl
