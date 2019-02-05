@@ -1,5 +1,4 @@
-@comment $OpenBSD$
-%%SHARED%%
+@comment $OpenBSD: PLIST,v$
 @bin bin/apitrace
 @bin bin/eglretrace
 @bin bin/glretrace
@@ -15,6 +14,8 @@ lib/apitrace/scripts/tracecheck.py
 lib/apitrace/scripts/tracediff.py
 lib/apitrace/scripts/unpickle.py
 lib/apitrace/wrappers/
+lib/apitrace/wrappers/egltrace.so
+lib/apitrace/wrappers/glxtrace.so
 share/doc/apitrace/
 share/doc/apitrace/BUGS.markdown
 share/doc/apitrace/LICENSE-libpng.txt
