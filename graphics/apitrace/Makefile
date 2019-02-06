@@ -18,9 +18,9 @@ COMPILER=	base-clang ports-gcc
 # MIT
 PERMIT_PACKAGE_CDROM=	Yes
 
-MODULES=	devel/cmake
+MODULES=	devel/cmake \
+		x11/qt5
 
-LIB_DEPENDS=	x11/qt5/qtbase \
-		x11/qt5/qtwebkit
+LIB_DEPENDS=	x11/qt5/qtwebkit
 
 .include <bsd.port.mk>
