@@ -1,0 +1,16 @@
+$OpenBSD$
+
+Index: common/os_posix.cpp
+--- common/os_posix.cpp.orig
++++ common/os_posix.cpp
+@@ -52,6 +52,10 @@
+ #include <android/log.h>
+ #endif
+ 
++#ifdef __OpenBSD__
++#include <limits.h>
++#endif
++
+ #ifndef PATH_MAX
+ #warning PATH_MAX undefined
+ #define PATH_MAX 4096
