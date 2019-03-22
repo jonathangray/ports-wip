@@ -1,0 +1,14 @@
+$OpenBSD$
+
+Index: loader/CMakeLists.txt
+--- loader/CMakeLists.txt.orig
++++ loader/CMakeLists.txt
+@@ -242,7 +242,7 @@ else()
+                                      "1"
+                                      VERSION
+                                      "${VulkanHeaders_VERSION_MAJOR}.${VulkanHeaders_VERSION_MINOR}.${VulkanHeaders_VERSION_PATCH}")
+-    target_link_libraries(vulkan -ldl -lpthread -lm)
++    target_link_libraries(vulkan -lpthread -lm)
+ 
+     if(APPLE)
+         find_library(COREFOUNDATION_LIBRARY NAMES CoreFoundation)

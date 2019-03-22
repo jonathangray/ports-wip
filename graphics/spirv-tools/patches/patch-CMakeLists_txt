@@ -1,0 +1,14 @@
+$OpenBSD$
+
+Index: CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -46,6 +46,8 @@ elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Android")
+   set(SPIRV_TIMER_ENABLED ON)
+ elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
+   add_definitions(-DSPIRV_FREEBSD)
++elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "OpenBSD")
++  add_definitions(-DSPIRV_OPENBSD)
+ else()
+   message(FATAL_ERROR "Your platform '${CMAKE_SYSTEM_NAME}' is not supported!")
+ endif()
