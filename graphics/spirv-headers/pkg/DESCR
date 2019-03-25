@@ -5,4 +5,3 @@ Machine-readable files for the SPIR-V Registry. This includes:
   and the extended instruction sets.
 * The XML registry file.
 * A tool to build the headers from the JSON grammar.
-

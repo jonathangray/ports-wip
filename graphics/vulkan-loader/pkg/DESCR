@@ -4,7 +4,7 @@ GPUs, each running with a different driver, or ICD (Installable Client
 Driver).  Vulkan also supports multiple global contexts (instances, in
 Vulkan terminology).  The ICD loader is a library that is placed between
 a Vulkan application and any number of Vulkan drivers, in order to
-support multiple drivers and the inst ance-level functionality that
+support multiple drivers and the instance-level functionality that
 works across these drivers.  Additionally, the loader manages inserting
 Vulkan layer libraries, such as validation layers, between an
 application and the drivers.
