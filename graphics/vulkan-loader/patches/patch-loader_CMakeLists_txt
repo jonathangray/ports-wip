@@ -1,8 +1,19 @@
 $OpenBSD$
 
+Avoid vulkan-validation-layers vk_loader_platform.h being used.
+
 Index: loader/CMakeLists.txt
 --- loader/CMakeLists.txt.orig
 +++ loader/CMakeLists.txt
+@@ -15,7 +15,7 @@
+ # limitations under the License.
+ # ~~~
+ 
+-include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_BINARY_DIR} ${CMAKE_BINARY_DIR})
++include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_BINARY_DIR} ${CMAKE_BINARY_DIR})
+ 
+ # Check for the existance of the secure_getenv or __secure_getenv commands
+ include(CheckFunctionExists)
 @@ -242,7 +242,7 @@ else()
                                       "1"
                                       VERSION

@@ -20,7 +20,6 @@ WANTLIB += ${COMPILER_LIBCXX} m
 BUILD_DEPENDS=	graphics/glslang \
 		graphics/vulkan-headers \
 		graphics/spirv-tools
-RUN_DEPENDS=	graphics/spirv-tools
 
 MODULES=	devel/cmake
 
