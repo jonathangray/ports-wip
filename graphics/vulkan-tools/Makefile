@@ -21,7 +21,10 @@ BUILD_DEPENDS=	graphics/glslang \
 		graphics/vulkan-headers
 LIB_DEPENDS=	graphics/vulkan-loader
 
-MODULES=	devel/cmake
+MODULES=	devel/cmake \
+		lang/python
+MODPY_VERSION=	${MODPY_DEFAULT_VERSION_3}
+MODPY_RUNDEP=	No
 
 CONFIGURE_ARGS+=	-DGLSLANG_INSTALL_DIR="${LOCALBASE}" \
 			-DBUILD_WSI_WAYLAND_SUPPORT:Bool=False

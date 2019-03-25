@@ -24,6 +24,9 @@ RUN_DEPENDS=	graphics/vulkan-headers
 
 CONFIGURE_ARGS=		-DBUILD_WSI_WAYLAND_SUPPORT:Bool=False
 
-MODULES=	devel/cmake
+MODULES=	devel/cmake \
+		lang/python
+MODPY_VERSION=	${MODPY_DEFAULT_VERSION_3}
+MODPY_RUNDEP=	No
 
 .include <bsd.port.mk>
